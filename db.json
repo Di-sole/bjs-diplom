@@ -6,10 +6,11 @@
       "password": "demo",
       "id": 1,
       "balance": {
-        "RUB": 1000,
+        "RUB": 480,
         "USD": 20,
-        "EUR": 20,
-        "NTC": 3000
+        "EUR": 38.24101027058823,
+        "NTC": 3000,
+        "": -500
       }
     },
     {
@@ -19,10 +20,11 @@
       "id": 2,
       "netocoins": 100,
       "balance": {
-        "RUB": 20,
+        "RUB": 1520,
         "USD": 0,
         "EUR": 0,
-        "NTC": 100
+        "NTC": 100,
+        "": 500
       }
     },
     {
@@ -60,6 +62,134 @@
         "EUR": 600,
         "NTC": 90000
       }
+    },
+    {
+      "created_at": "2020-04-22T08:35:46.112Z",
+      "login": "nina@demo.ru",
+      "password": "demo",
+      "id": 6,
+      "balance": {
+        "RUB": 0,
+        "USD": 0,
+        "EUR": 0,
+        "NTC": 0
+      }
+    },
+    {
+      "created_at": "2020-04-22T08:36:01.141Z",
+      "login": "nina@demo",
+      "password": "demo",
+      "id": 7,
+      "balance": {
+        "RUB": 0,
+        "USD": 0,
+        "EUR": 0,
+        "NTC": 0
+      }
+    },
+    {
+      "created_at": "2020-04-22T20:47:30.330Z",
+      "id": 8,
+      "balance": {
+        "RUB": 0,
+        "USD": 0,
+        "EUR": 0,
+        "NTC": 0
+      }
+    },
+    {
+      "created_at": "2020-04-22T20:47:51.436Z",
+      "id": 9,
+      "balance": {
+        "RUB": 0,
+        "USD": 0,
+        "EUR": 0,
+        "NTC": 0
+      }
+    },
+    {
+      "created_at": "2020-04-22T20:55:56.797Z",
+      "login": "lida@demo.ru",
+      "password": "demo",
+      "id": 10,
+      "balance": {
+        "RUB": 0,
+        "USD": 0,
+        "EUR": 0,
+        "NTC": 0
+      }
+    },
+    {
+      "created_at": "2020-04-22T20:59:46.665Z",
+      "login": "xxx@demo.ru",
+      "password": "demo",
+      "id": 11,
+      "balance": {
+        "RUB": 0,
+        "USD": 0,
+        "EUR": 0,
+        "NTC": 0
+      }
+    },
+    {
+      "created_at": "2020-04-22T21:31:23.379Z",
+      "login": "xxx@demo",
+      "password": "demo",
+      "id": 12,
+      "balance": {
+        "RUB": 0,
+        "USD": 0,
+        "EUR": 0,
+        "NTC": 0
+      }
+    },
+    {
+      "created_at": "2020-04-22T21:32:53.618Z",
+      "login": "olga@demo.ru",
+      "password": "demo",
+      "id": 13,
+      "balance": {
+        "RUB": 0,
+        "USD": 0,
+        "EUR": 0,
+        "NTC": 0
+      }
+    },
+    {
+      "created_at": "2020-04-22T21:33:47.448Z",
+      "login": "1",
+      "password": "demo",
+      "id": 14,
+      "balance": {
+        "RUB": 0,
+        "USD": 0,
+        "EUR": 0,
+        "NTC": 0
+      }
+    },
+    {
+      "created_at": "2020-04-22T21:36:22.606Z",
+      "login": "nona@demo.ru",
+      "password": "demo",
+      "id": 15,
+      "balance": {
+        "RUB": 0,
+        "USD": 0,
+        "EUR": 0,
+        "NTC": 0
+      }
+    },
+    {
+      "created_at": "2020-04-22T21:38:01.734Z",
+      "login": "nana@demo.ru",
+      "password": "demo",
+      "id": 16,
+      "balance": {
+        "RUB": 0,
+        "USD": 0,
+        "EUR": 0,
+        "NTC": 0
+      }
     }
   ],
   "favorites": {
@@ -78,6 +208,7 @@
       "1": "Важный пацан",
       "3": "Дедуля",
       "4": "Галя"
-    }
+    },
+    "6": {}
   }
 }
