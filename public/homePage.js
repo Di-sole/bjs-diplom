@@ -24,6 +24,8 @@ const getProfile = () => {
     ApiConnector.current(callback);
 }
 
+getProfile();
+
 // Получение текущих курсов валюты
 const ratesBoard = new RatesBoard();
 
@@ -38,7 +40,8 @@ const getRatesBoard = () => {
     ApiConnector.getStocks(callback);
 }
 
-const ratesBoardTimer = setInterval(getRatesBoard, 60000);
+getRatesBoard();
+setInterval(getRatesBoard, 60000);
 
 // ОПЕРАЦИИ С ДЕНЬГАМИ
 const moneyManager = new MoneyManager();
@@ -48,9 +51,9 @@ moneyManager.addMoneyCallback = data => {
     const callback = (response) => {
         if (response.success) {
             ProfileWidget.showProfile(response.data);
-            moneyManager.setMessage(response.success, 'Баланс пополнен'); 
+            moneyManager.setMessage(false, 'Баланс пополнен'); 
         } else {
-            moneyManager.setMessage(response.success, response.data); 
+            moneyManager.setMessage(true, response.data); 
         }
     }
 
@@ -62,9 +65,9 @@ moneyManager.conversionMoneyCallback = data => {
     const callback = (response) => {
         if (response.success) {
             ProfileWidget.showProfile(response.data);
-            moneyManager.setMessage(response.success, 'Конвертация прошла успешно');
+            moneyManager.setMessage(false, 'Конвертация прошла успешно');
         } else {
-            moneyManager.setMessage(response.success, response.data);
+            moneyManager.setMessage(true, response.data);
         }
     }
 
@@ -76,9 +79,9 @@ moneyManager.sendMoneyCallback = data => {
     const callback = (response) => {
         if (response.success) {
             ProfileWidget.showProfile(response.data);
-            moneyManager.setMessage(response.success, 'Средства переведены');
+            moneyManager.setMessage(false, 'Средства переведены');
         } else {
-            moneyManager.setMessage(response.success, response.data);
+            moneyManager.setMessage(true, response.data);
         }
     }
 
@@ -102,6 +105,8 @@ const getFavorites = () => {
     ApiConnector.getFavorites(callback)
 }
 
+getFavorites();
+
 // добавление пользователя в избранные
 favoritesWidget.addUserCallback = data => {
     const callback = (response) => {
@@ -109,9 +114,9 @@ favoritesWidget.addUserCallback = data => {
             favoritesWidget.clearTable();
             favoritesWidget.fillTable(response.data);
             moneyManager.updateUsersList(response.data);
-            favoritesWidget.setMessage(response.success, 'Пользователь добавлен в список избранных');
+            favoritesWidget.setMessage(false, 'Пользователь добавлен в список избранных');
         } else {
-            favoritesWidget.setMessage(response.success, response.data);
+            favoritesWidget.setMessage(true, response.data);
         }
     }
 
@@ -125,9 +130,9 @@ favoritesWidget.removeUserCallback = data => {
             favoritesWidget.clearTable();
             favoritesWidget.fillTable(response.data);
             moneyManager.updateUsersList(response.data);
-            favoritesWidget.setMessage(response.success, 'Пользователь удалён из списка избранных');
+            favoritesWidget.setMessage(false, 'Пользователь удалён из списка избранных');
         } else {
-            favoritesWidget.setMessage(response.success, response.data);
+            favoritesWidget.setMessage(true, response.data);
         }
     }
 
